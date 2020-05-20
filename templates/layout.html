@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to Virtual Labs - A MHRD Govt of india Initiative">
+    <meta name="author" content="Virtual Labs - A MHRD Govt of india Initiative">
+    
+    <title>Welcome to Virtual Labs - A MHRD Govt of india Initiative</title>
+    
+     <link rel="shortcut icon" href="{{ url_for('static', filename="favicon.ico") }}">
+    
+ 
+    <link href="{{ url_for('static', filename="bootstrap.min.css") }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename="style.css") }}" rel="stylesheet">
+</head>
+
+  <body id="page-top" class="index">
+  <div id="top">
+    <header>
+    {% include 'includes/_navbar.html' %}
+    </header>
+    <div id="content">
+      {% include 'includes/_sidebar.html' %}
+      {% block page_content %} {% endblock %}
+      
+      
+    </div>
+   {% include 'includes/_footer.html' %}
+   </div> <!--top div-->
+   
+   
+
+   
+  </body>
+  <!-- jQuery -->
+    <script src="{{ url_for('static', filename="jquery.js") }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename="bootstrap.min.js") }}"></script>
+
+	<!-- Custom Theme JavaScript -->
+    <script src="{{ url_for('static', filename="custom.js") }}"></script>
+	
+</html>

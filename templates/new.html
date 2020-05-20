@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Answers - Flask SQLAlchemy example</h3>
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+      
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "a1">1. Digital signature can’t provide ______ for the message.</label><br>
+         <input type = "radio" name = "a1" placeholder = "op1" value = "A"/>Integrity<br>
+         <input type = "radio" name = "a1" placeholder = "op2" value = "B"/>Confidentiality<br>
+         <input type = "radio" name = "a1" placeholder = "op3" value = "C"/>Non repudiation<br>
+	 <input type = "radio" name = "a1" placeholder = "op4" value = "D"/>Authentication<br>
+         <label for = "a2">2. Digital signature uses ______ for generating valid signature.</label><br>
+         <input type = "radio" name = "a2" placeholder = "op1" value = "A"/>Private key<br>
+         <input type = "radio" name = "a2" placeholder = "op2" value = "B"/>Public key<br>
+         <input type = "radio" name = "a2" placeholder = "op3" value = "C"/>Secret key<br>
+         <input type = "radio" name = "a2" placeholder = "op4" value = "D"/>None of the above<br>
+         <label for = "a3">3. Verification Algorithm uses ______ for validating digital signature.</label><br>
+         <input type = "radio" name = "a3" placeholder = "op1" value = "A"/>Private key<br>
+         <input type = "radio" name = "a3" placeholder = "op2" value = "B"/>Public key<br>
+         <input type = "radio" name = "a3" placeholder = "op3" value = "C"/>Secret key<br>
+         <input type = "radio" name = "a3" placeholder = "op4" value = "D"/>None of the above<br>
+         <label for = "a4">4. Is digital signature scheme possible without public key cryptography?</label><br>
+         <input type = "radio" name = "a4" placeholder = "op1" value = "A"/>Yes<br>
+         <input type = "radio" name = "a4" placeholder = "op2" value = "B"/>No<br>
+         <input type = "radio" name = "a4" placeholder = "op3" value = "C"/>May be exist<br>
+         <input type = "radio" name = "a4" placeholder = "op4" value = "D"/>None of the aboove<br>
+         <label for = "a6">5. Explain importance of Hashing(using experiment)and explain why Hashing is needed?</label><br>
+         <textarea name = "a5" placeholder = "Write answer here"></textarea><br>
+         <label for = "a6">6. Suggest a scheme that does not use any hashing scheme.</label><br>
+         <textarea name = "a6" placeholder = "Write answer here"></textarea><br>
+         <label for = "a7">7. Explain why digital signature schemes works.</label><br>
+         <textarea name = "a7" placeholder = "Write answer here"></textarea><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+   </body>
+</html>
